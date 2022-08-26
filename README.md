@@ -1,18 +1,19 @@
 # para-empleo
 prueba requerida &amp; README
 
-#include <iostream>  // Operaciones basicas de E/S
-#include <fstream>   // Operaciones de E/S con ficheros de texto
+#include <iostream> // Operaciones basicas de E/S
+
+#include <fstream>  // Operaciones de E/S con ficheros de texto
+
 #include <string>
 
 using namespace std;
 
-bool parse_mac_dst(string linea) { 
-
-// Esta función analiza con condicionales si dirección mac de destino es introducida correctamente.
+bool parse_mac_dst(string linea) { // Esta función analiza con condicionales si dirección mac de destino es introducida correctamente.
 	
-	// Con este if comprobamos que dirección mac de destino tiene la estructura correcta, con sus
-	// guiones y valores acostumbrados, se pueden modificar si necesario.
+// Con este if comprobamos que dirección mac de destino tiene la estructura correcta, con sus
+// guiones y valores acostumbrados, se pueden modificar si necesario.
+
 	if (linea[0]=='2' && (linea[1]=='C'||'E') && linea[2]=='-' && linea[5]=='-' && linea[8]=='-' 
 	&& linea[11]=='-' && linea[14]=='-' && (linea[3]=='5'||'2' ) && (linea[4]=='4'||'2' ) 
 	&& linea[6]=='9' && (linea[7]=='1'||'2' ) && linea[9]=='8' && linea[10]=='8' && (linea[12]=='A'||'C' )
