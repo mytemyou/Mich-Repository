@@ -6,9 +6,9 @@ using namespace std;
 
 bool parse_mac_dst(string linea) { 
 
-// Esta funci髇 analiza con condicionales si direcci髇 mac de destino es introducida correctamente.
+// Esta funci贸n analiza con condicionales si direcci贸n mac de destino es introducida correctamente.
 	
-	// Con este if comprobamos que direcci髇 mac de destino tiene la estructura correcta, con sus
+	// Con este if comprobamos que direcci贸n mac de destino tiene la estructura correcta, con sus
 	// guiones y valores acostumbrados, se pueden modificar si necesario.
 	if (linea[0]=='2' && (linea[1]=='C'||'E') && linea[2]=='-' && linea[5]=='-' && linea[8]=='-' 
 	&& linea[11]=='-' && linea[14]=='-' && (linea[3]=='5'||'2' ) && (linea[4]=='4'||'2' ) 
@@ -21,7 +21,7 @@ bool parse_mac_dst(string linea) {
 
 bool filtro_mac_lista( string texto, string linea ) {
 
-// Funci髇 que comprueba si la nueva linea le韉a estaba ya introducida para evitar duplicidad.
+// Funci贸n que comprueba si la nueva linea le铆da estaba ya introducida para evitar duplicidad.
  	
 	if(texto.find( linea.substr(18,17))>10000 ) // El comando substr() selecciona la cadena deseada.
 		return 1 ;
@@ -30,7 +30,7 @@ bool filtro_mac_lista( string texto, string linea ) {
 
 void imprimir_mac_lista(string linea){
 
-// Funci髇 que muestra en pantalla una nueva direcci髇 mac de destino cuando es detectada con las 
+// Funci贸n que muestra en pantalla una nueva direcci贸n mac de destino cuando es detectada con las 
 // funciones anteriores.
 
 		cout << linea << endl ;	
@@ -38,7 +38,7 @@ void imprimir_mac_lista(string linea){
 
 void read_packet_file() {
 
-// Funci髇 que lee el fichero y contiene todo el proceso para realizar la tarea :
+// Funci贸n que lee el fichero y contiene todo el proceso para realizar la tarea :
 	
 	string texto, linea ;
 	
@@ -71,7 +71,7 @@ void read_packet_file() {
 
 int main () {
 	
-	read_packet_file(); // llamo a la funci髇 que lee el fichero y realiza la tarea. 
+	read_packet_file(); // llamo a la funci贸n que lee el fichero y realiza la tarea. 
 	
 return 0 ; 
 }  
